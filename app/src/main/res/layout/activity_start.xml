@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activities_margin"
+        android:orientation="vertical">
+
+        <ImageView
+            android:contentDescription="@string/img_info"
+            android:id="@+id/photo_image_view"
+            style="@style/custom_image"
+            android:src="@drawable/start_img" />
+
+        <Button
+            android:id="@+id/start"
+            style="@style/custom_button"
+            android:layout_marginTop="25dp"
+            android:text="@string/start" />
+    </LinearLayout>
+
+</ScrollView>

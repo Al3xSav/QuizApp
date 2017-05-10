@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">Programming Quiz</string>
+
+    <string name="img_info">Image Logo</string>
+
+    <string name="question_1">1) What are the two parts of a value of type double?</string>
+
+    <!-- 4 possible answers for question 1-->
+    <string name="answer_1_1">A. significant digits - exponent</string> <!-- correct answer -->
+    <string name="answer_1_2">B. length - exponent</string>
+    <string name="answer_1_3">C. significant digits - numerator</string>
+    <string name="answer_1_4">D. denominator - mode</string>
+
+    <string name="question_2">2) What is the value in a after
+        String s = \"Foolish boy\"; int a = s.indexOf(\"fool\"); ?
+    </string>
+
+    <!-- 4 possible answers for question 2-->
+    <string name="answer_2_1">A. random value</string>
+    <string name="answer_2_2">B. 0</string>
+    <string name="answer_2_3">C. 4</string>
+    <string name="answer_2_4">D. -1</string> <!-- correct answer -->
+
+    <string name="question_3">3) What is an infinite loop?</string>
+
+    <!-- 4 possible answers for question 3-->
+    <string name="answer_3_1">A. A loop that functions infinitely well</string>
+    <string name="answer_3_2">B. A loop that runs forever</string><!-- correct answer -->
+    <string name="answer_3_3">C. A loop that never starts</string>
+    <string name="answer_3_4">D. A loop that will never function</string>
+
+    <string name="question_4">4) If s = "text", what is the value returned by s.length()?</string>
+
+    <!-- 4 possible answers for question 4-->
+    <string name="answer_4_1">A. false</string>
+    <string name="answer_4_2">B. true</string>
+    <string name="answer_4_3">C. 4</string><!-- correct answer -->
+    <string name="answer_4_4">D. 5</string>
+
+    <string name="question_5">5) What is the difference between a TextArea and a TextField?</string>
+
+    <!-- 4 possible answers for question 5-->
+    <string name="answer_5_1">A. A TextArea can handle multiple lines of text</string><!-- correct answer -->
+    <string name="answer_5_2">B. A TextArea can be used for output</string>
+    <string name="answer_5_3">C. TextArea is not a class</string>
+    <string name="answer_5_4">D. TextAreas are used for displaying graphics</string>
+
+    <string name="question_6">6) The sequence \\n does what?</string>
+
+    <!-- 4 possible answers for question 6-->
+    <string name="answer_6_1">A. Prints a backslash followed by a n</string>
+    <string name="answer_6_2">B. Adds 5 spaces</string>
+    <string name="answer_6_3">C. Starts a new line</string> <!-- correct answer -->
+    <string name="answer_6_4">D. Makes a link</string>
+
+    <string name="question_7">7) A compound statement is:</string>
+
+    <!-- 4 possible answers for question 7-->
+    <string name="answer_7_1">A. A collection of one or more statements enclosed in braces</string> <!-- correct answer -->
+    <string name="answer_7_2">B. A statement involving if and else</string>
+    <string name="answer_7_3">C. A way of declaring variables</string>
+    <string name="answer_7_4">D. A way of setting the value of a variable</string>
+
+    <string name="question_8">8) The following is NOT an example of a data type.</string>
+
+    <!-- 4 possible answers for question 8-->
+    <string name="answer_8_1">A. int</string>
+    <string name="answer_8_2">B. public</string> <!-- correct answer -->
+    <string name="answer_8_3">C. Button</string>
+    <string name="answer_8_4">D. void</string>
+
+    <string name="question_9">9) Which of the following is boolean-expression?</string>
+
+    <!-- 4 possible answers for question 9-->
+    <string name="answer_9_1">A. m.setText("Hello")</string>
+    <string name="answer_9_2">B. x = 6</string>
+    <string name="answer_9_3">C. 70</string>
+    <string name="answer_9_4">D. cause == yes</string> <!-- correct answer -->
+
+    <string name="question_10">10) A function is:</string>
+
+    <!-- 4 possible answers for question 10-->
+    <string name="answer_10_1">A. An entity that receives inputs and outputs</string> <!-- correct answer -->
+    <string name="answer_10_2">B. A way of storing values</string>
+    <string name="answer_10_3">C. A sequence of characters enclosed by quotes</string>
+    <string name="answer_10_4">D. A kind of compute</string>
+
+    <!-- Submit Button -->
+    <string name="submit">Submit Answers</string>
+
+    <!-- Start Button -->
+    <string name="start">Start Quiz</string>
+
+    <!-- Replay Button -->
+    <string name="replay">Replay Quiz</string>
+
+    <!-- Results Messages -->
+    <string name="zero_outOf_ten">0/10 - Seriously?!</string>
+    <string name="one_outOf_ten">1/10 - Terrible result!</string>
+    <string name="two_outOf_ten">2/10 - Bad result!</string>
+    <string name="three_outOf_ten">3/10 - Bad result!</string>
+    <string name="four_outOf_ten">4/10 - Still bad!</string>
+    <string name="five_outOf_ten">5/10 - Need improvement!</string>
+    <string name="six_outOf_ten">6/10 - Keep going!</string>
+    <string name="seven_outOf_ten">7/10 - Good result!</string>
+    <string name="eight_outOf_ten">8/10 - Awesome!</string>
+    <string name="nine_outOf_ten">9/10 - Perfect!</string>
+    <string name="ten_outOf_ten">10/10 - Nailed it!</string>
+
+    <string name="last_hint">Press here for correct answers</string>
+
+</resources>
