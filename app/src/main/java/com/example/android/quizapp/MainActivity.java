@@ -9,10 +9,13 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import static com.example.android.quizapp.R.id.answer_3;
+import static com.example.android.quizapp.R.id.answer_4;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String STATE_SCORE = "stateOfScore";
-    private int score = 0;
+    private int score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +25,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putInt(STATE_SCORE, score);
-        super.onSaveInstanceState(savedInstanceState);
+        if(savedInstanceState != null) {
+            savedInstanceState.putInt(STATE_SCORE, score);
+            super.onSaveInstanceState(savedInstanceState);
+        }
     }
 
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        savedInstanceState.getInt(STATE_SCORE);
+        if(savedInstanceState != null) {
+            super.onRestoreInstanceState(savedInstanceState);
+            savedInstanceState.getInt(STATE_SCORE);
+        }
     }
 
     public void submitAnswers(View view) {
@@ -49,18 +56,20 @@ public class MainActivity extends AppCompatActivity {
         mainToResultsIntent.putExtra("correct", score);
         startActivity(mainToResultsIntent);
 
+        score = 0;
+
     }
 
     /* Question Number 1 */
     public int questionNo1() {
         RadioGroup questionOne = (RadioGroup) findViewById(R.id.questions_1);
-        RadioButton answer_1 = (RadioButton) findViewById(R.id.answer_1_1);
+        RadioButton answer1 = (RadioButton) findViewById(R.id.answer_1_1);
 
         /* Answer No. 1 */
         if (questionOne.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_1.isChecked()) {
+            if (answer1.isChecked()) {
                 return 1;
             }
         }
@@ -70,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 2 */
     public int questionNo2() {
         RadioGroup questionTwo = (RadioGroup) findViewById(R.id.questions_2);
-        RadioButton answer_2 = (RadioButton) findViewById(R.id.answer_2_2);
+        RadioButton answer2 = (RadioButton) findViewById(R.id.answer_2_2);
 
         /* Answer No. 3 */
         if (questionTwo.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_2.isChecked()) {
+            if (answer2.isChecked()) {
                 return 1;
             }
         }
@@ -85,13 +94,13 @@ public class MainActivity extends AppCompatActivity {
 
     /* Question Number 3 */
     public int questionNo3() {
-        EditText answer_3 = (EditText) findViewById(R.id.answer_3);
+        EditText answer3 = (EditText) findViewById(answer_3);
 
         /* Answer No. 2 */
-        if (answer_3.getText().toString().equals("")) {
+        if (answer3.getText().toString().equals("")) {
             return 0;
         } else {
-            if (answer_3.getText().toString().equals("-1")) {
+            if (answer3.getText().toString().equals("-1")) {
                 return 1;
             }
         }
@@ -100,13 +109,13 @@ public class MainActivity extends AppCompatActivity {
 
     /* Question Number 4 */
     public int questionNo4 () {
-        EditText answer_4 = (EditText) findViewById(R.id.answer_4);
+        EditText answer4 = (EditText) findViewById(answer_4);
 
         /* Answer No. 4 */
-        if (answer_4.getText().toString().equals("")) {
+        if (answer4.getText().toString().equals("")) {
             return 0;
         } else {
-            if (answer_4.getText().toString().equals("4")) {
+            if (answer4.getText().toString().equals("4")) {
                 return 1;
             }
         }
@@ -116,13 +125,13 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 5 */
     public int questionNo5() {
         RadioGroup questionFive = (RadioGroup) findViewById(R.id.questions_5);
-        RadioButton answer_5 = (RadioButton) findViewById(R.id.answer_5_1);
+        RadioButton answer5 = (RadioButton) findViewById(R.id.answer_5_1);
 
         /* Answer No. 5 */
         if (questionFive.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_5.isChecked()) {
+            if (answer5.isChecked()) {
                 return 1;
             }
         }
@@ -132,13 +141,13 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 6 */
     public int questionNo6() {
         RadioGroup questionSix = (RadioGroup) findViewById(R.id.questions_6);
-        RadioButton answer_6 = (RadioButton) findViewById(R.id.answer_6_3);
+        RadioButton answer6 = (RadioButton) findViewById(R.id.answer_6_3);
 
         /* Answer No. 6 */
         if (questionSix.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_6.isChecked()) {
+            if (answer6.isChecked()) {
                 return 1;
             }
         }
@@ -148,13 +157,13 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 7 */
     public int questionNo7() {
         RadioGroup questionSeven = (RadioGroup) findViewById(R.id.questions_7);
-        RadioButton answer_7 = (RadioButton) findViewById(R.id.answer_7_1);
+        RadioButton answer7 = (RadioButton) findViewById(R.id.answer_7_1);
 
         /* Answer No. 7 */
         if (questionSeven.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_7.isChecked()) {
+            if (answer7.isChecked()) {
                 return 1;
             }
         }
@@ -163,12 +172,14 @@ public class MainActivity extends AppCompatActivity {
 
     /* Question Number 8 */
     public int questionNo8() {
-        CheckBox answer_8_1 = (CheckBox) findViewById(R.id.answer_8_1);
-        CheckBox answer_8_3 = (CheckBox) findViewById(R.id.answer_8_3);
-        CheckBox answer_8_4 = (CheckBox) findViewById(R.id.answer_8_4);
+        CheckBox answer81 = (CheckBox) findViewById(R.id.answer_8_1);
+        CheckBox answer82 = (CheckBox) findViewById(R.id.answer_8_2);
+        CheckBox answer83 = (CheckBox) findViewById(R.id.answer_8_3);
+        CheckBox answer84 = (CheckBox) findViewById(R.id.answer_8_4);
 
         /* Answer No. 8 */
-        if (answer_8_1.isChecked() && answer_8_3.isChecked() && answer_8_4.isChecked()) {
+        if (answer81.isChecked() && !answer82.isChecked() && answer83.isChecked()
+                && answer84.isChecked()) {
             return 1;
         } else {
             return 0;
@@ -178,13 +189,13 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 9 */
     public int questionNo9() {
         RadioGroup questionNine = (RadioGroup) findViewById(R.id.questions_9);
-        RadioButton answer_9 = (RadioButton) findViewById(R.id.answer_9_4);
+        RadioButton answer9 = (RadioButton) findViewById(R.id.answer_9_4);
 
         /* Answer No. 9 */
         if (questionNine.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_9.isChecked()) {
+            if (answer9.isChecked()) {
                 return 1;
             }
         }
@@ -194,13 +205,13 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 10 */
     public int questionNo10() {
         RadioGroup questionTen = (RadioGroup) findViewById(R.id.questions_10);
-        RadioButton answer_10 = (RadioButton) findViewById(R.id.answer_10_1);
+        RadioButton answer10 = (RadioButton) findViewById(R.id.answer_10_1);
 
         /* Answer No. 10 */
         if (questionTen.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
-            if (answer_10.isChecked()) {
+            if (answer10.isChecked()) {
                 return 1;
             }
         }
