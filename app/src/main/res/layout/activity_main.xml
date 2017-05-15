@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activities_margin"
         android:orientation="vertical"
-        >
+        android:weightSum="1">
 
         <!-- 1st Question -->
         <TextView
@@ -44,8 +44,7 @@
 
         </RadioGroup>
 
-
-        <!-- 2nd Question -->
+        <!-- 2rd Question -->
         <TextView
             style="@style/questions_text_view"
             android:text="@string/question_2" />
@@ -79,89 +78,24 @@
         <TextView
             style="@style/questions_text_view"
             android:text="@string/question_3" />
-        <RadioGroup
-            android:id="@+id/questions_3"
-            style="@style/radio_groups">
 
-            <RadioButton
-                android:id="@+id/answer_3_1"
-                style="@style/radio_buttons"
-                android:text="@string/answer_3_1" />
-
-            <RadioButton
-                android:id="@+id/answer_3_2"
-                style="@style/radio_buttons"
-                android:text="@string/answer_3_2" />
-
-            <RadioButton
-                android:id="@+id/answer_3_3"
-                style="@style/radio_buttons"
-                android:text="@string/answer_3_3" />
-
-            <RadioButton
-                android:id="@+id/answer_3_4"
-                style="@style/radio_buttons"
-                android:text="@string/answer_3_4" />
-
-        </RadioGroup>
+        <EditText
+            android:labelFor="@+id/answer_3"
+            android:id="@+id/answer_3"
+            style="@style/editText_style"/>
 
         <!-- 4th Question -->
         <TextView
             style="@style/questions_text_view"
             android:text="@string/question_4" />
-        <RadioGroup
-            android:id="@+id/questions_4"
-            style="@style/radio_groups">
 
-            <RadioButton
-                android:id="@+id/answer_4_1"
-                style="@style/radio_buttons"
-                android:text="@string/answer_4_1" />
+        <EditText
+            android:labelFor="@+id/answer_4"
+            android:id="@+id/answer_4"
+            style="@style/editText_style"/>
 
-            <RadioButton
-                android:id="@+id/answer_4_2"
-                style="@style/radio_buttons"
-                android:text="@string/answer_4_2" />
-
-            <RadioButton
-                android:id="@+id/answer_4_3"
-                style="@style/radio_buttons"
-                android:text="@string/answer_4_3" />
-
-            <RadioButton
-                android:id="@+id/answer_4_4"
-                style="@style/radio_buttons"
-                android:text="@string/answer_4_4" />
-
-        </RadioGroup>
 
         <!-- 5th Question -->
-        <RadioGroup
-            android:id="@+id/questions_7"
-            style="@style/radio_groups">
-
-            <RadioButton
-                android:id="@+id/answer_7_1"
-                style="@style/radio_buttons"
-                android:text="@string/answer_7_1" />
-
-            <RadioButton
-                android:id="@+id/answer_7_2"
-                style="@style/radio_buttons"
-                android:text="@string/answer_7_2" />
-
-            <RadioButton
-                android:id="@+id/answer_7_3"
-                style="@style/radio_buttons"
-                android:text="@string/answer_7_3" />
-
-            <RadioButton
-                android:id="@+id/answer_7_4"
-                style="@style/radio_buttons"
-                android:text="@string/answer_7_4" />
-
-        </RadioGroup>
-
         <TextView
             style="@style/questions_text_view"
             android:text="@string/question_5" />
@@ -195,6 +129,14 @@
         <TextView
             style="@style/questions_text_view"
             android:text="@string/question_6" />
+
+        <ImageView
+            android:contentDescription="@string/img_info"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/question_6"/>
+
         <RadioGroup
             android:id="@+id/questions_6"
             style="@style/radio_groups">
@@ -225,6 +167,37 @@
         <TextView
             style="@style/questions_text_view"
             android:text="@string/question_7" />
+
+        <ImageView
+            android:contentDescription="@string/img_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/question_7" />
+        <RadioGroup
+            android:id="@+id/questions_7"
+            style="@style/radio_groups">
+
+            <RadioButton
+                android:id="@+id/answer_7_1"
+                style="@style/radio_buttons"
+                android:text="@string/answer_7_1" />
+
+            <RadioButton
+                android:id="@+id/answer_7_2"
+                style="@style/radio_buttons"
+                android:text="@string/answer_7_2" />
+
+            <RadioButton
+                android:id="@+id/answer_7_3"
+                style="@style/radio_buttons"
+                android:text="@string/answer_7_3" />
+
+            <RadioButton
+                android:id="@+id/answer_7_4"
+                style="@style/radio_buttons"
+                android:text="@string/answer_7_4" />
+
+        </RadioGroup>
 
         <!-- 8th Question -->
         <TextView

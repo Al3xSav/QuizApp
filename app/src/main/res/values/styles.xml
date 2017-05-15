@@ -35,7 +35,7 @@
         <item name="android:layout_marginRight">10dp</item>
     </style>
 
-    <!-- All 3 Buttons -->
+    <!-- Buttons -->
     <style name="custom_button">
         <item name="android:background">@drawable/blue_button</item>
         <item name="android:layout_height">wrap_content</item>
@@ -46,29 +46,51 @@
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">2</item>
-
     </style>
 
     <style name="custom_image">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/image_height</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_margin">1dp</item>
     </style>
 
     <!-- Result TextViews -->
     <style name="results_text_view">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_margin">20dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:layout_marginLeft">15dp</item>
-        <item name="android:layout_marginRight">15dp</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
+
+    <!-- EditText style -->
+    <style name="editText_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:inputType">none</item>
+        <item name="android:textColor">@color/colorQuestions</item>
+        <item name="android:maxLength">10</item>
+    </style>
+
+    <style name="rating_bar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">.5</item>
+    </style>
+
 </resources>

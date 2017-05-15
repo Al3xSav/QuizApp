@@ -11,19 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activities_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <ImageView
             android:contentDescription="@string/img_info"
             android:id="@+id/photo_image_view"
             style="@style/custom_image"
-            android:src="@drawable/start_img" />
+            android:src="@drawable/custom_programming" />
 
         <Button
             android:id="@+id/start"
             style="@style/custom_button"
             android:layout_marginTop="25dp"
-            android:text="@string/start" />
+            android:layout_marginBottom="10dp"
+            android:text="@string/start"/>
     </LinearLayout>
 
 </ScrollView>

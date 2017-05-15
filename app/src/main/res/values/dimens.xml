@@ -4,4 +4,5 @@
     <dimen name="button_width">140dp</dimen>
     <dimen name="name_input_between">5dp</dimen>
     <dimen name="name_text_view">70dp</dimen>
+    <dimen name="image_height">350dp</dimen>
 </resources>

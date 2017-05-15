@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -69,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
     /* Question Number 2 */
     public int questionNo2() {
         RadioGroup questionTwo = (RadioGroup) findViewById(R.id.questions_2);
-        RadioButton answer_2 = (RadioButton) findViewById(R.id.answer_2_4);
+        RadioButton answer_2 = (RadioButton) findViewById(R.id.answer_2_2);
 
-        /* Answer No. 2 */
+        /* Answer No. 3 */
         if (questionTwo.getCheckedRadioButtonId() == -1) {
             return 0;
         } else {
@@ -84,14 +85,13 @@ public class MainActivity extends AppCompatActivity {
 
     /* Question Number 3 */
     public int questionNo3() {
-        RadioGroup questionThree = (RadioGroup) findViewById(R.id.questions_3);
-        RadioButton answer_3 = (RadioButton) findViewById(R.id.answer_3_2);
+        EditText answer_3 = (EditText) findViewById(R.id.answer_3);
 
-        /* Answer No. 3 */
-        if (questionThree.getCheckedRadioButtonId() == -1) {
+        /* Answer No. 2 */
+        if (answer_3.getText().toString().equals("")) {
             return 0;
         } else {
-            if (answer_3.isChecked()) {
+            if (answer_3.getText().toString().equals("-1")) {
                 return 1;
             }
         }
@@ -100,14 +100,13 @@ public class MainActivity extends AppCompatActivity {
 
     /* Question Number 4 */
     public int questionNo4 () {
-        RadioGroup questionFour = (RadioGroup) findViewById(R.id.questions_4);
-        RadioButton answer_4 = (RadioButton) findViewById(R.id.answer_4_3);
+        EditText answer_4 = (EditText) findViewById(R.id.answer_4);
 
         /* Answer No. 4 */
-        if (questionFour.getCheckedRadioButtonId() == -1) {
+        if (answer_4.getText().toString().equals("")) {
             return 0;
         } else {
-            if (answer_4.isChecked()) {
+            if (answer_4.getText().toString().equals("4")) {
                 return 1;
             }
         }
