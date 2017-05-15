@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Programming Quiz</string>
+    <string name="app_name">Computer Quiz</string>
 
     <string name="img_info">Image Logo</string>
 
@@ -25,7 +25,6 @@
 
     <string name="question_4">4) If s = "text", what is the value returned by s.length()?</string>
 
-
     <string name="question_5">5) What is the difference between a TextArea and a TextField?</string>
 
     <!-- 4 possible answers for question 5-->
@@ -50,13 +49,13 @@
     <string name="answer_7_3">C. a=5, b=3, 0</string>
     <string name="answer_7_4">D. compile error</string>
 
-    <string name="question_8">8) The following is NOT an example of a data type.</string>
+    <string name="question_8">8) Which of the followings are examples of data types?</string>
 
     <!-- 4 possible answers for question 8-->
-    <string name="answer_8_1">A. int</string>
-    <string name="answer_8_2">B. public</string> <!-- correct answer -->
-    <string name="answer_8_3">C. Button</string>
-    <string name="answer_8_4">D. void</string>
+    <string name="answer_8_1">A. int</string> <!-- correct answer -->
+    <string name="answer_8_2">B. public</string> <!-- wrong answer -->
+    <string name="answer_8_3">C. Button</string> <!-- correct answer -->
+    <string name="answer_8_4">D. void</string> <!-- correct answer -->
 
     <string name="question_9">9) Which of the following is boolean-expression?</string>
 

@@ -1,10 +1,12 @@
 package com.example.android.quizapp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -12,8 +14,6 @@ import java.util.ArrayList;
 public class ResultsActivity extends AppCompatActivity {
 
     ArrayList<String> answers = new ArrayList<>();
-    TextView answersTextView = (TextView) findViewById(R.id.answers_text_view);
-
     int count = 0;
 
     @Override
@@ -21,11 +21,14 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+        TextView answersTextView = (TextView) findViewById(R.id.answers_text_view);
         TextView resultTextView = (TextView) findViewById(R.id.result_text_view);
         RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar);
 
         Bundle data = this.getIntent().getExtras();
         int correctAnswers = data.getInt("correct");
+
+        showToast(correctAnswers);
 
         switch (correctAnswers) {
             case 0:
@@ -81,7 +84,7 @@ public class ResultsActivity extends AppCompatActivity {
         answers.add("Question No.5:\n\n" + getResources().getString(R.string.answer_5_1));
         answers.add("Question No.6:\n\n" + getResources().getString(R.string.answer_6_3));
         answers.add("Question No.7:\n\n" + getResources().getString(R.string.answer_7_1));
-        answers.add("Question No.8:\n\n" + getResources().getString(R.string.answer_8_2));
+        answers.add("Question No.8:\n\n" + "int, button, void");
         answers.add("Question No.9:\n\n" + getResources().getString(R.string.answer_9_4));
         answers.add("Question No.10:\n\n" + getResources().getString(R.string.answer_10_1));
 
@@ -90,13 +93,22 @@ public class ResultsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                    answersTextView.setText(answers.get(count));
-                    count++;
-                    if(count == answers.size()) {
-                        count = 0;
-                    }
-                //answersTextView.setText(answers.get((int) (Math.random() *answers.size())));
+                TextView answersTextView = (TextView) findViewById(R.id.answers_text_view);
+                answersTextView.setText(answers.get(count));
+                count++;
+                if(count == answers.size()) {
+                    count = 0;
+                }
             }
         });
+    }
+
+    public void showToast(int score){
+
+        Context context = getApplicationContext();
+        CharSequence text = "Your correct answers were " + score ;
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
     }
 }

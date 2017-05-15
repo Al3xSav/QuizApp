@@ -23,6 +23,12 @@
             android:id="@+id/ratingBar"
             style="@style/rating_bar" />
 
+        <ImageView
+            android:contentDescription="@string/img_info"
+            style="@style/custom_image"
+            android:src="@drawable/thanks_logo"
+            android:layout_height="130dp"/>
+
         <TextView
             android:id="@+id/answers_text_view"
             style="@style/results_text_view"

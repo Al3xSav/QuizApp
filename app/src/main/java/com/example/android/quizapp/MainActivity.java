@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         score += questionNo8();
         score += questionNo9();
         score += questionNo10();
-
 
         Intent mainToResultsIntent = new Intent(MainActivity.this, ResultsActivity.class);
         mainToResultsIntent.putExtra("correct", score);
@@ -163,18 +163,16 @@ public class MainActivity extends AppCompatActivity {
 
     /* Question Number 8 */
     public int questionNo8() {
-        RadioGroup questionEight = (RadioGroup) findViewById(R.id.questions_8);
-        RadioButton answer_8 = (RadioButton) findViewById(R.id.answer_8_2);
+        CheckBox answer_8_1 = (CheckBox) findViewById(R.id.answer_8_1);
+        CheckBox answer_8_3 = (CheckBox) findViewById(R.id.answer_8_3);
+        CheckBox answer_8_4 = (CheckBox) findViewById(R.id.answer_8_4);
 
         /* Answer No. 8 */
-        if (questionEight.getCheckedRadioButtonId() == -1) {
-            return 0;
+        if (answer_8_1.isChecked() && answer_8_3.isChecked() && answer_8_4.isChecked()) {
+            return 1;
         } else {
-            if (answer_8.isChecked()) {
-                return 1;
-            }
+            return 0;
         }
-        return 0;
     }
 
     /* Question Number 9 */
